@@ -1,0 +1,48 @@
+{
+  "id": "did:web:sagius.org",
+  "@context": [
+    "https://www.w3.org/ns/did/v1",
+    {
+      "@base": "did:web:sagius.org"
+    }
+  ],
+  "service": [
+    {
+      "id": "#linkeddomains",
+      "type": "LinkedDomains",
+      "serviceEndpoint": {
+        "origins": [
+          "https://sagius.org/"
+        ]
+      }
+    },
+    {
+      "id": "#hub",
+      "type": "IdentityHub",
+      "serviceEndpoint": {
+        "instances": [
+          "https://hub.did.msidentity.com/v1.0/0bbb05a6-f81f-430d-816e-bfab2fafd110"
+        ]
+      }
+    }
+  ],
+  "verificationMethod": [
+    {
+      "id": "#1960c36978f94ac480eb02f28aabebffvcSigningKey-85317",
+      "controller": "did:web:sagius.org",
+      "type": "EcdsaSecp256k1VerificationKey2019",
+      "publicKeyJwk": {
+        "crv": "secp256k1",
+        "kty": "EC",
+        "x": "6uYczGsycMV55X2j35UYS3X60cvGAWY3j78xMWPu0f0",
+        "y": "L2ztnRFOut4F7OV81G11NwvJqrBb2Y93UtSY6FnghuI"
+      }
+    }
+  ],
+  "authentication": [
+    "#1960c36978f94ac480eb02f28aabebffvcSigningKey-85317"
+  ],
+  "assertionMethod": [
+    "#1960c36978f94ac480eb02f28aabebffvcSigningKey-85317"
+  ]
+}
